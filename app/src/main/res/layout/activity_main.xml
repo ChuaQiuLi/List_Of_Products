@@ -7,26 +7,302 @@
     android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/textView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:text="3C PRODUCTS "
-        android:textColor="#000000"
-        android:textSize="28sp" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="331dp"
-        app:srcCompat="@drawable/electronic" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/_3c_products"
+                android:textColor="#000000"
+                android:textSize="28sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="324dp"
+                android:contentDescription="@string/electronic"
+                app:srcCompat="@drawable/electronic" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="20sp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/this_mobile_application_helps_to_keep_track_of_the_end_date_of_each_product_sales"
+                android:textColor="#000000"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tvThingsCanDo"
+                android:layout_width="386dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginLeft="8sp"
+                android:layout_marginBottom="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/below_are_the_list_of_things_you_can_do_with_the_mobile_application"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvThingsCanDo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginLeft="8sp"
+                android:layout_marginBottom="5sp"
+                android:fontFamily="@font/archivo_narrow_bold"
+                android:text="@string/you_can_add_new_product_and_the_expiry_date"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvThingsCanDo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginLeft="8sp"
+                android:layout_marginBottom="5sp"
+                android:fontFamily="@font/archivo_narrow_bold"
+                android:text="@string/you_can_update_a_product_and_its_expiry_date"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvThingsCanDo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginLeft="8sp"
+                android:layout_marginBottom="5sp"
+                android:fontFamily="@font/archivo_narrow_bold"
+                android:text="@string/you_can_delete_a_product_from_the_listview"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvThingsCanDo4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginLeft="8sp"
+                android:fontFamily="@font/archivo_narrow_bold"
+                android:text="@string/you_can_filter_the_product_expiry_date_based_on_1_3_and_6_months"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvProductTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginLeft="8sp"
+                android:layout_marginTop="20sp"
+                android:fontFamily="sans-serif-medium"
+
+                android:text="@string/product_that_we_have"
+                android:textColor="#000000"
+                android:textSize="21sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProduct1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginEnd="15.6sp"
+                    android:layout_marginRight="15.6sp"
+                    android:fontFamily="@font/arima_madurai_black"
+                    android:text="@string/samsung_galaxy_a70"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnSamsungA70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#22769C"
+                    android:text="@string/information_regarding_product1"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProduct2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginEnd="5sp"
+                    android:layout_marginRight="5sp"
+                    android:fontFamily="@font/arima_madurai_black"
+                    android:text="@string/samsung_galaxy_flip_z"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnFlipZ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#3F51B5"
+                    android:text="@string/information_regarding_product_2"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvAirPods2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginEnd="23.5sp"
+                    android:layout_marginRight="23.5sp"
+                    android:fontFamily="@font/arima_madurai_black"
+                    android:text="@string/apple_airpods_gen_2"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FF9800"
+                    android:text="@string/information_regarding_product6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProduct3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginEnd="50.5sp"
+                    android:layout_marginRight="50.5sp"
+                    android:fontFamily="@font/arima_madurai_black"
+                    android:text="@string/iphone_12_series"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnIphone12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#A2AAAD"
+                    android:text="@string/information_regarding_product3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProduct4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginEnd="58.5sp"
+                    android:layout_marginRight="58.5sp"
+                    android:fontFamily="@font/arima_madurai_black"
+                    android:text="@string/google_pixel_4a"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnPixel4a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#DCE0DC"
+                    android:text="@string/information_regarding_product4" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProduct5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginTop="6sp"
+                    android:layout_marginEnd="9sp"
+                    android:layout_marginRight="9sp"
+                    android:fontFamily="@font/arima_madurai_black"
+                    android:text="@string/samsung_galaxy_buds"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnGalaxyBuds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#A2B6B9"
+                    android:text="@string/information_regarding_product5" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18sp"
+                android:background="#000080"
+                android:text="@string/list_of_products_that_are_on_sales"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
 

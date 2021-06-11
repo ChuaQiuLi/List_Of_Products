@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">List Of Products</string>
+    <string name="_3c_products">3C PRODUCTS</string>
+
+    <string name="electronic">electronic</string>
+    <string name="this_mobile_application_helps_to_keep_track_of_the_end_date_of_each_product_sales">This mobile application helps to keep track of the end date of each product sales</string>
+    <string name="you_can_delete_a_product_from_the_listview">- You can delete a product from the ListView</string>
+    <string name="you_can_add_new_product_and_the_expiry_date">- You can add new product and the expiry date</string>
+    <string name="below_are_the_list_of_things_you_can_do_with_the_mobile_application">Below are the list of things you can do with the mobile application :</string>
+    <string name="you_can_filter_the_product_expiry_date_based_on_1_3_and_6_months">- You can filter the product expiry date based on 1,3 and 6 months</string>
+    <string name="product_that_we_have">Product that we have :</string>
+    <string name="you_can_update_a_product_and_its_expiry_date">- You can update a product and its expiry date</string>
+    <string name="iphone_12_series">- IPhone 12 Series</string>
+    <string name="samsung_galaxy_buds">- Samsung Galaxy Buds</string>
+    <string name="google_pixel_4a">- Google Pixel 4a</string>
+    <string name="samsung_galaxy_flip_z">- Samsung Galaxy Flip Z</string>
+    <string name="information_regarding_product_2">information regarding product</string>
+    <string name="samsung_galaxy_a70">- Samsung Galaxy A70</string>
+    <string name="information_regrading_product6">Information regrading product</string>
+    <string name="list_of_products_that_are_on_sales">List of products that are on sales</string>
+    <string name="information_regarding_product1">Information regarding product</string>
+    <string name="information_regarding_product3">information regarding product</string>
+    <string name="information_regarding_product4">information regarding product</string>
+    <string name="information_regarding_product5">information regarding product</string>
+    <string name="apple_airpods_gen_2">- Apple AirPods Gen 2</string>
+    <string name="information_regarding_product6">information regarding product</string>
+
+
 </resources>
