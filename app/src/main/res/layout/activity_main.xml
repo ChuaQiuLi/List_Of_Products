@@ -101,7 +101,7 @@
                 android:layout_marginStart="8sp"
                 android:layout_marginLeft="8sp"
                 android:fontFamily="@font/archivo_narrow_bold"
-                android:text="@string/you_can_filter_the_product_expiry_date_based_on_1_3_and_6_months"
+                android:text="@string/you_can_filter_the_product_expiry_date_based_on_1_3_and_8_months"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8sp"
                 android:layout_marginLeft="8sp"
-                android:layout_marginTop="20sp"
+                android:layout_marginTop="25sp"
                 android:fontFamily="sans-serif-medium"
 
                 android:text="@string/product_that_we_have"
@@ -119,8 +119,9 @@
                 android:textSize="21sp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25sp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -129,7 +130,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8sp"
                     android:layout_marginLeft="8sp"
-                    android:layout_marginTop="6sp"
                     android:layout_marginEnd="15.6sp"
                     android:layout_marginRight="15.6sp"
                     android:fontFamily="@font/arima_madurai_black"
@@ -139,7 +139,7 @@
 
                 <Button
                     android:id="@+id/btnSamsungA70"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#22769C"
@@ -148,8 +148,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25sp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -158,7 +159,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8sp"
                     android:layout_marginLeft="8sp"
-                    android:layout_marginTop="6sp"
                     android:layout_marginEnd="5sp"
                     android:layout_marginRight="5sp"
                     android:fontFamily="@font/arima_madurai_black"
@@ -168,7 +168,7 @@
 
                 <Button
                     android:id="@+id/btnFlipZ"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#3F51B5"
@@ -179,93 +179,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvAirPods2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:layout_marginLeft="8sp"
-                    android:layout_marginTop="6sp"
-                    android:layout_marginEnd="23.5sp"
-                    android:layout_marginRight="23.5sp"
-                    android:fontFamily="@font/arima_madurai_black"
-                    android:text="@string/apple_airpods_gen_2"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/button12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#FF9800"
-                    android:text="@string/information_regarding_product6" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvProduct3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:layout_marginLeft="8sp"
-                    android:layout_marginTop="6sp"
-                    android:layout_marginEnd="50.5sp"
-                    android:layout_marginRight="50.5sp"
-                    android:fontFamily="@font/arima_madurai_black"
-                    android:text="@string/iphone_12_series"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/btnIphone12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#A2AAAD"
-                    android:text="@string/information_regarding_product3" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvProduct4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:layout_marginLeft="8sp"
-                    android:layout_marginTop="6sp"
-                    android:layout_marginEnd="58.5sp"
-                    android:layout_marginRight="58.5sp"
-                    android:fontFamily="@font/arima_madurai_black"
-                    android:text="@string/google_pixel_4a"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/btnPixel4a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#DCE0DC"
-                    android:text="@string/information_regarding_product4" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_marginTop="25sp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -274,7 +189,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8sp"
                     android:layout_marginLeft="8sp"
-                    android:layout_marginTop="6sp"
                     android:layout_marginEnd="9sp"
                     android:layout_marginRight="9sp"
                     android:fontFamily="@font/arima_madurai_black"
@@ -284,7 +198,7 @@
 
                 <Button
                     android:id="@+id/btnGalaxyBuds"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#A2B6B9"
@@ -292,11 +206,98 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProduct4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginEnd="58.5sp"
+                    android:layout_marginRight="58.5sp"
+                    android:fontFamily="@font/arima_madurai_black"
+                    android:text="@string/google_pixel_4a"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnPixel4a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#DCE0DC"
+                    android:text="@string/information_regarding_product4" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvAirPods2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginEnd="23.5sp"
+                    android:layout_marginRight="23.5sp"
+                    android:fontFamily="@font/arima_madurai_black"
+                    android:text="@string/apple_airpods_gen_2"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnAirpods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FF9800"
+                    android:text="@string/information_regarding_product6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvProduct3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginEnd="50.5sp"
+                    android:layout_marginRight="50.5sp"
+                    android:fontFamily="@font/arima_madurai_black"
+                    android:text="@string/iphone_12_series"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnIphone12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#A2AAAD"
+                    android:text="@string/information_regarding_product3" />
+
+            </LinearLayout>
+
             <Button
                 android:id="@+id/btnListView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18sp"
+                android:layout_marginTop="30sp"
+                android:layout_marginBottom="30sp"
                 android:background="#000080"
                 android:text="@string/list_of_products_that_are_on_sales"
                 android:textColor="#FFFFFF" />
