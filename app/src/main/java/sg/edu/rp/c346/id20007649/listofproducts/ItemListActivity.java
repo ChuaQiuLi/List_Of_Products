@@ -66,16 +66,11 @@ public class ItemListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String product = "";
 
-                if (listedTask.isEmpty() == false) {
-                    if (etProduct == null ) {
-                        Toast.makeText(ItemListActivity.this,"Please make sure that you have fill up the details before you can add them. ", Toast.LENGTH_LONG).show();
 
-                        }
+                    if (etProduct != null) {
 
-                    else{
-
+                        String product = "";
                         product += etProduct.getText().toString();
                         listedTask.add(product);
                         task.notifyDataSetChanged();
@@ -85,7 +80,7 @@ public class ItemListActivity extends AppCompatActivity {
                     }
                 }
 
-            }
+
         });
 
 
@@ -93,33 +88,35 @@ public class ItemListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                int position = Integer.parseInt(etProduct.getText().toString());
+
+                    if (etProduct == null || etExpiryDate == null) {
+                        Toast.makeText(ItemListActivity.this,"Please make sure that you have fill up the details before you can update them. ", Toast.LENGTH_LONG).show();
 
 
-
-                if (listedTask.isEmpty() == false) {
-                    if (etProduct != null && etExpiryDate != null) {
-                        String product = "";
-
-                        product += etExpiryDate.getText().toString();
-                        listedTask.set(position, product);
-                        task.notifyDataSetChanged();
-                        etProduct.setText(null);
-                        etExpiryDate.setText(null);
-                        Toast.makeText(ItemListActivity.this, "Product is being updated successfully", Toast.LENGTH_LONG).show();
 
                     }
 
 
                     else {
-                        if (etExpiryDate == null || etProduct == null) {
-                            Toast.makeText(ItemListActivity.this,"Please make sure that you have fill up the details before you can update them. ", Toast.LENGTH_LONG).show();
+                        int position = Integer.parseInt(etProduct.getText().toString());
+                        if (position >= listedTask.size()) {
+                            Toast.makeText(ItemListActivity.this,"Wrong index number ", Toast.LENGTH_LONG).show();
+
 
                         }
 
                         else{
+                            String product = "";
 
-                            Toast.makeText(ItemListActivity.this,"Wrong index number ", Toast.LENGTH_LONG).show();
+                            product += etExpiryDate.getText().toString();
+                            listedTask.set(position, product);
+                            task.notifyDataSetChanged();
+                            etProduct.setText(null);
+                            etExpiryDate.setText(null);
+                            Toast.makeText(ItemListActivity.this, "Product is being updated successfully", Toast.LENGTH_LONG).show();
+
+
+
 
                         }
 
@@ -128,7 +125,7 @@ public class ItemListActivity extends AppCompatActivity {
 
                 }
 
-            }
+
         });
 
 
