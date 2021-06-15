@@ -130,15 +130,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8sp"
                     android:layout_marginLeft="8sp"
-                    android:layout_marginEnd="15.6sp"
-                    android:layout_marginRight="15.6sp"
+                    android:layout_marginEnd="37.5sp"
+                    android:layout_marginRight="37.5sp"
                     android:fontFamily="@font/arima_madurai_black"
                     android:text="@string/samsung_galaxy_a70"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/btnSamsungA70"
+                    android:id="@+id/btnSamsung"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -154,113 +154,26 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvProduct2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:layout_marginLeft="8sp"
-                    android:layout_marginEnd="5sp"
-                    android:layout_marginRight="5sp"
-                    android:fontFamily="@font/arima_madurai_black"
-                    android:text="@string/samsung_galaxy_flip_z"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/btnFlipZ"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#3F51B5"
-                    android:text="@string/information_regarding_product_2"
-                    android:textColor="#FFFFFF" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25sp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvProduct5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:layout_marginLeft="8sp"
-                    android:layout_marginEnd="9sp"
-                    android:layout_marginRight="9sp"
-                    android:fontFamily="@font/arima_madurai_black"
-                    android:text="@string/samsung_galaxy_buds"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/btnGalaxyBuds"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#A2B6B9"
-                    android:text="@string/information_regarding_product5" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25sp"
-                android:orientation="horizontal">
-
-                <TextView
                     android:id="@+id/tvProduct4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8sp"
                     android:layout_marginLeft="8sp"
-                    android:layout_marginEnd="58.5sp"
-                    android:layout_marginRight="58.5sp"
+                    android:layout_marginEnd="55sp"
+                    android:layout_marginRight="55sp"
                     android:fontFamily="@font/arima_madurai_black"
                     android:text="@string/google_pixel_4a"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/btnPixel4a"
+                    android:id="@+id/btnGoogle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#DCE0DC"
+                    android:background="#2196F3"
                     android:text="@string/information_regarding_product4" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25sp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvAirPods2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8sp"
-                    android:layout_marginLeft="8sp"
-                    android:layout_marginEnd="23.5sp"
-                    android:layout_marginRight="23.5sp"
-                    android:fontFamily="@font/arima_madurai_black"
-                    android:text="@string/apple_airpods_gen_2"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/btnAirpods"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#FF9800"
-                    android:text="@string/information_regarding_product6" />
             </LinearLayout>
 
             <LinearLayout
@@ -275,19 +188,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8sp"
                     android:layout_marginLeft="8sp"
-                    android:layout_marginEnd="50.5sp"
-                    android:layout_marginRight="50.5sp"
+                    android:layout_marginEnd="35sp"
+                    android:layout_marginRight="35sp"
                     android:fontFamily="@font/arima_madurai_black"
                     android:text="@string/iphone_12_series"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/btnIphone12"
+                    android:id="@+id/btnIphone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#A2AAAD"
+                    android:background="#F16E44"
                     android:text="@string/information_regarding_product3" />
 
             </LinearLayout>

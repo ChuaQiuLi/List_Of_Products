@@ -2,6 +2,7 @@ package sg.edu.rp.c346.id20007649.listofproducts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Application;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,6 +14,10 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+
 
 public class ItemListActivity extends AppCompatActivity {
 
@@ -23,10 +28,10 @@ public class ItemListActivity extends AppCompatActivity {
     Button btnDelete;
     Spinner spinnerItems;
     Spinner spinnerFunction;
-    EditText etExpiryDate;
+    EditText etProductDetails;
 
 
-    ArrayList<String> listedTask = new ArrayList<String>();
+    ArrayList<String> listedTaskProduct = new ArrayList<String>();
 
 
     @Override
@@ -42,21 +47,30 @@ public class ItemListActivity extends AppCompatActivity {
         btnDelete = findViewById(R.id.btnDelete);
         spinnerItems = findViewById(R.id.spinnerFilter);
         spinnerFunction = findViewById(R.id.spinnerFunction);
-        etExpiryDate = findViewById(R.id.etExpiryDate);
+        etProductDetails = findViewById(R.id.etProductDetails);
 
 
 
-        listedTask.add("Expires 2021-11-18 Samsung Galaxy Buds ");
-        listedTask.add("Expires 2021-11-27 Samsung Galaxy A70 ");
-        listedTask.add("Expires 2022-7-31  Samsung Galaxy Flip Z ");
-        listedTask.add("Expires 2021-11-2  Google Pixel 4a ");
-        listedTask.add("Expires 2022-5-6   IPhone 12 series ");
-        listedTask.add("Expires 2022-5-23  Apple Airpods Gen 2 ");
+        listedTaskProduct.add("Expires 2021-11-18 Samsung Galaxy Buds");
+
+        listedTaskProduct.add("Expires 2021-11-27 Samsung Galaxy A70");
+
+        listedTaskProduct.add("Expires 2022-7-31  Samsung Galaxy Flip Z ");
+
+        listedTaskProduct.add("Expires 2021-11-2  Google Pixel 4a");
+
+        listedTaskProduct.add("Expires 2022-5-6   IPhone 12 series ");
+
+        listedTaskProduct.add("Expires 2022-5-23  Apple Airpods Gen 2 ");
 
 
 
 
-        ArrayAdapter task = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listedTask);
+
+
+
+        ArrayAdapter task = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listedTaskProduct);
+
 
         listViewTask.setAdapter(task);
 
@@ -67,13 +81,20 @@ public class ItemListActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-
                     if (etProduct != null) {
 
                         String product = "";
+
+                        product += "Expires ";
                         product += etProduct.getText().toString();
-                        listedTask.add(product);
+
+                        listedTaskProduct.add(product);
+
+
+
+
                         task.notifyDataSetChanged();
+
                         etProduct.setText(null);
                         Toast.makeText(ItemListActivity.this,"Product is being added successfully! ", Toast.LENGTH_LONG).show();
 
@@ -89,43 +110,31 @@ public class ItemListActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                    if (etProduct == null || etExpiryDate == null) {
-                        Toast.makeText(ItemListActivity.this,"Please make sure that you have fill up the details before you can update them. ", Toast.LENGTH_LONG).show();
+                int position = Integer.parseInt(etProduct.getText().toString());
 
-
-
-                    }
-
-
-                    else {
-                        int position = Integer.parseInt(etProduct.getText().toString());
-                        if (position >= listedTask.size()) {
-                            Toast.makeText(ItemListActivity.this,"Wrong index number ", Toast.LENGTH_LONG).show();
-
-
-                        }
-
-                        else{
-                            String product = "";
-
-                            product += etExpiryDate.getText().toString();
-                            listedTask.set(position, product);
-                            task.notifyDataSetChanged();
-                            etProduct.setText(null);
-                            etExpiryDate.setText(null);
-                            Toast.makeText(ItemListActivity.this, "Product is being updated successfully", Toast.LENGTH_LONG).show();
-
-
-
-
-                        }
-
-                    }
+                if (position >= listedTaskProduct.size()) {
+                    Toast.makeText(ItemListActivity.this,"Wrong index number ", Toast.LENGTH_LONG).show();
 
 
                 }
 
+                else{
+                    String product = "";
 
+                    product += etProductDetails.getText().toString();
+                    listedTaskProduct.set(position, product);
+                    task.notifyDataSetChanged();
+                    etProduct.setText(null);
+                    etProductDetails.setText(null);
+                    Toast.makeText(ItemListActivity.this, "Product is being updated successfully", Toast.LENGTH_LONG).show();
+
+
+
+
+                        }
+
+                    }
+                    
         });
 
 
@@ -137,21 +146,15 @@ public class ItemListActivity extends AppCompatActivity {
 
 
 
-
-                if (listedTask.isEmpty() == true) {
-                    Toast.makeText(ItemListActivity.this,"You don't have any product to remove", Toast.LENGTH_LONG).show();
-                }
-
-                else {
                     int position = Integer.parseInt(etProduct.getText().toString());
 
-                    if (position >= listedTask.size()) {
+                    if (position >= listedTaskProduct.size()) {
                         Toast.makeText(ItemListActivity.this,"Wrong index number", Toast.LENGTH_LONG).show();
 
                     }
 
                     else {
-                        listedTask.remove(position);
+                        listedTaskProduct.remove(position);
                         task.notifyDataSetChanged();
                         etProduct.setText(null);
                         Toast.makeText(ItemListActivity.this,"Product is being deleted Successfully", Toast.LENGTH_LONG).show();
@@ -162,7 +165,7 @@ public class ItemListActivity extends AppCompatActivity {
 
                 }
 
-            }
+
         });
 
 
@@ -175,8 +178,9 @@ public class ItemListActivity extends AppCompatActivity {
 
                     case 0 :
 
-                        etProduct.setHint("Enter data in this format: Expires <YYYY-M-D> Product Name> ");
-                        etExpiryDate.setEnabled(false);
+                        etProduct.setHint("Enter the data in this format: <YYYY-M-D> Product Name> ");
+                        etProductDetails.setHint(null);
+                        etProductDetails.setEnabled(false);
                         btnDelete.setEnabled(false);
                         btnUpdate.setEnabled(false);
                         btnAdd.setEnabled(true);
@@ -186,8 +190,8 @@ public class ItemListActivity extends AppCompatActivity {
                     case 1 :
 
                         etProduct.setHint("Type in the index number  of the product to be updated ");
-                        etExpiryDate.setHint("Write in the following format : Expires <YYYY-M-D> Product Name >");
-                        etExpiryDate.setEnabled(true);
+                        etProductDetails.setHint("Write in the following format : <YYYY-M-D> Product Name >");
+                        etProductDetails.setEnabled(true);
                         btnAdd.setEnabled(false);
                         btnUpdate.setEnabled(true);
                         btnDelete.setEnabled(false);
@@ -196,8 +200,9 @@ public class ItemListActivity extends AppCompatActivity {
 
                     case 2 :
 
-                        etProduct.setHint("Type in the index number of the product to be removed");
-                        etExpiryDate.setEnabled(false);
+                        etProduct.setHint("Type in the index number of the product you want to removed");
+                        etProductDetails.setEnabled(false);
+                        etProductDetails.setHint(null);
                         btnAdd.setEnabled(false);
                         btnUpdate.setEnabled(false);
                         btnDelete.setEnabled(true);
@@ -213,6 +218,13 @@ public class ItemListActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+
+
     }
 
 }

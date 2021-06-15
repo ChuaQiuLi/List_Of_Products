@@ -16,33 +16,34 @@
         android:entries="@array/spinnerFilter" />
 
 
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="18sp"
+        android:fontFamily="@font/archivo_narrow_bold"
+        android:text="@string/list_of_products_of_when_each_product_sales_ends_at"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
     <Spinner
         android:id="@+id/spinnerFunction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/spinnerFunction" />
 
-    <TextView
-        android:id="@+id/tvTitle2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:layout_marginBottom="15sp"
-        android:fontFamily="@font/archivo_narrow_bold"
-        android:text="@string/list_of_products_of_when_each_product_sales_ends_at"
-        android:textColor="#000000"
-        android:textSize="22sp" />
-
     <EditText
         android:id="@+id/etProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
         android:layout_marginBottom="15sp"
         android:ems="10"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etExpiryDate"
+        android:id="@+id/etProductDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15sp"
