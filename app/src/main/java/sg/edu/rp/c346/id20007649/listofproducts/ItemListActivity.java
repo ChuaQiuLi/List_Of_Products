@@ -30,8 +30,11 @@ public class ItemListActivity extends AppCompatActivity {
     Spinner spinnerFunction;
     EditText etProductDetails;
 
+    ArrayList <String> listedTaskProduct = new ArrayList<String>();
 
-    ArrayList<String> listedTaskProduct = new ArrayList<String>();
+
+
+
 
 
     @Override
@@ -51,6 +54,10 @@ public class ItemListActivity extends AppCompatActivity {
 
 
 
+
+
+
+
         listedTaskProduct.add("Expires 2021-11-18 Samsung Galaxy Buds");
 
         listedTaskProduct.add("Expires 2021-11-27 Samsung Galaxy A70");
@@ -65,10 +72,13 @@ public class ItemListActivity extends AppCompatActivity {
 
 
 
-        ArrayAdapter task = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listedTaskProduct);
+
+        ArrayAdapter task = new ArrayAdapter  (this, android.R.layout.simple_list_item_1,listedTaskProduct);
 
 
         listViewTask.setAdapter(task);
+
+
 
 
 
@@ -81,13 +91,14 @@ public class ItemListActivity extends AppCompatActivity {
 
                         String product = "";
 
+
                         product += "Expires ";
                         product += etProduct.getText().toString();
 
                         listedTaskProduct.add(product);
-
-
                         task.notifyDataSetChanged();
+
+
 
                         etProduct.setText(null);
                         Toast.makeText(ItemListActivity.this,"Product is being added successfully! ", Toast.LENGTH_LONG).show();

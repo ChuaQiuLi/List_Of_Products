@@ -38,13 +38,15 @@
                 android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginLeft="8sp"
                 android:layout_marginTop="10sp"
                 android:layout_marginBottom="20sp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:text="@string/this_mobile_application_helps_to_keep_track_of_the_end_date_of_each_product_sales"
                 android:textColor="#000000"
-                android:textSize="21sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/tvThingsCanDo"
@@ -56,7 +58,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/below_are_the_list_of_things_you_can_do_with_the_mobile_application"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvThingsCanDo1"
@@ -139,7 +141,7 @@
 
                 <Button
                     android:id="@+id/btnSamsung"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#22769C"
@@ -168,11 +170,12 @@
 
                 <Button
                     android:id="@+id/btnGoogle"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#2196F3"
-                    android:text="@string/information_regarding_product4" />
+                    android:background="#11548A"
+                    android:text="@string/information_regarding_product4"
+                    android:textColor="#FFFFFF" />
 
             </LinearLayout>
 
@@ -197,11 +200,12 @@
 
                 <Button
                     android:id="@+id/btnIphone"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#F16E44"
-                    android:text="@string/information_regarding_product3" />
+                    android:background="#ED6337"
+                    android:text="@string/information_regarding_product3"
+                    android:textColor="#FFFFFF" />
 
             </LinearLayout>
 
@@ -210,10 +214,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30sp"
-                android:layout_marginBottom="30sp"
                 android:background="#000080"
                 android:text="@string/list_of_products_that_are_on_sales"
                 android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvEnding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:layout_marginLeft="8sp"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/archivo_narrow_bold"
+                android:gravity="center"
+                android:text="@string/hope_you_enjoy_and_have_fun_using_this_application_enjoy"
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>
