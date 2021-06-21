@@ -14,6 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8sp"
+            android:layout_marginLeft="8sp"
             android:orientation="vertical">
 
             <TextView
@@ -113,8 +115,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8sp"
                 android:layout_marginLeft="8sp"
-                android:layout_marginTop="25sp"
-                android:layout_marginBottom="20sp"
+                android:layout_marginTop="30sp"
+                android:layout_marginBottom="30sp"
 
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/product_that_we_have"
@@ -125,12 +127,14 @@
                 android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="189dp"
+                android:contentDescription="@string/samsung"
                 app:srcCompat="@drawable/samsung" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15sp"
+                android:layout_marginBottom="30sp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -156,11 +160,18 @@
                     android:textColor="#FFFFFF" />
             </LinearLayout>
 
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="169dp"
+                android:contentDescription="@string/google"
+                app:srcCompat="@drawable/google" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25sp"
-                android:layout_marginBottom="20sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="30sp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -191,6 +202,7 @@
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
                 android:layout_height="189dp"
+                android:contentDescription="@string/iphone"
                 app:srcCompat="@drawable/iphone" />
 
             <LinearLayout
@@ -236,11 +248,11 @@
                 android:id="@+id/tvEnding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8sp"
-                android:layout_marginLeft="8sp"
-                android:layout_marginTop="15sp"
+                android:layout_marginStart="16sp"
+                android:layout_marginLeft="16sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="30sp"
                 android:fontFamily="@font/archivo_narrow_bold"
-                android:gravity="center"
                 android:text="@string/hope_you_enjoy_and_have_fun_using_this_application_enjoy"
                 android:textColor="#000000"
                 android:textSize="20sp" />

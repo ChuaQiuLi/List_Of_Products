@@ -44,7 +44,10 @@
     <string name="delete">delete</string>
     <string name="add">ADD</string>
     <string name="update">update</string>
-    <string name="hope_you_enjoy_and_have_fun_using_this_application_enjoy">Hope you enjoy and have fun using this application! Enjoy~</string>
+    <string name="hope_you_enjoy_and_have_fun_using_this_application_enjoy">Hope you have fun using this application! Enjoy~</string>
+    <string name="samsung">samsung</string>
+    <string name="iphone">iphone</string>
+    <string name="google">google</string>
 
 
 </resources>
