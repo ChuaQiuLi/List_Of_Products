@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         btnListView = findViewById(R.id.btnListView);
 
 
+
+
         btnSamsung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

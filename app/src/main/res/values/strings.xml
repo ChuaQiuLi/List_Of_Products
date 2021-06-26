@@ -16,6 +16,7 @@
         <item>Update a product and expiry date </item>
         <item>Delete a product </item>
 
+
     </string-array>
 
     <string name="_3c_products">3C PRODUCTS</string>
@@ -26,11 +27,9 @@
     <string name="below_are_the_list_of_things_you_can_do_with_the_mobile_application">Below are the list of things you can do with this mobile application : </string>
     <string name="product_that_we_have">Product that you have :</string>
     <string name="you_can_update_a_product_and_its_expiry_date">- You can update a product and its expiry date.</string>
-    <string name="iphone_12_series">- IPhone 12 </string>
 
-    <string name="google_pixel_4a">- Google </string>
     <string name="information_regarding_product_2">information regarding product</string>
-    <string name="samsung_galaxy_a70">- Samsung </string>
+
     <string name="information_regrading_product6">Information regrading product</string>
     <string name="list_of_products_that_are_on_sales">Products that are currently having warranty</string>
     <string name="information_regarding_product1">Information regarding product</string>
@@ -41,13 +40,16 @@
     <string name="information_regarding_product6">information regarding product</string>
     <string name="you_can_filter_the_product_expiry_date_based_on_1_3_and_8_months">- You can filter the product expiry date based on 1, 3 and 8 months.</string>
     <string name="list_of_products_of_when_each_product_sales_ends_at">List of products of when each product expiry date ends at :</string>
-    <string name="delete">delete</string>
     <string name="add">ADD</string>
     <string name="update">update</string>
     <string name="hope_you_enjoy_and_have_fun_using_this_application_enjoy">Hope you have fun using this application! Enjoy~</string>
-    <string name="samsung">samsung</string>
-    <string name="iphone">iphone</string>
-    <string name="google">google</string>
+    <string name="samsung">Samsung</string>
+    <string name="iphone">IPhone</string>
+    <string name="google">Google</string>
+    <string name="delete">Delete</string>
+    <string name="select_a_expiry_date_for_the_product">Select a expiry date for the product : </string>
+    <string name="iphone">IPhone</string>
+    <string name="google">Google</string>
 
 
 </resources>
