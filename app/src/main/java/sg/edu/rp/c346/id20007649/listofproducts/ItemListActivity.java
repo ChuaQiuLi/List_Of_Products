@@ -66,18 +66,19 @@ public class ItemListActivity extends AppCompatActivity {
         products.add("IPhone 12 series");
         products.add("Apple Airpods Gen 2");
 
+        expiryDate.add("2021-11-18");
+        expiryDate.add("2021-11-27");
+        expiryDate.add("2022-7-31");
+        expiryDate.add("2021-11-2");
+        expiryDate.add("2022-5-6");
+        expiryDate.add("2022-5-23");
 
-        listedTaskProduct.add("Expires 2021-11-18 Samsung Galaxy Buds");
+        for (int i =0; i < products.size(); i++) {
+            for (int j= (i+1) ; j < expiryDate.size(); j++) {
+                listedTaskProduct.add("Expires " + expiryDate.get(j) + products.get(i) );
 
-        listedTaskProduct.add("Expires 2021-11-27 Samsung Galaxy A70");
-
-        listedTaskProduct.add("Expires 2022-7-31  Samsung Galaxy Flip Z ");
-
-        listedTaskProduct.add("Expires 2021-11-2  Google Pixel 4a");
-
-        listedTaskProduct.add("Expires 2022-5-6   IPhone 12 series ");
-
-        listedTaskProduct.add("Expires 2022-5-23  Apple Airpods Gen 2 ");
+            }
+        }
 
 
         ArrayAdapter task = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listedTaskProduct);
@@ -93,17 +94,29 @@ public class ItemListActivity extends AppCompatActivity {
 
                 if (etProduct != null) {
 
-                    String product = "";
+                    String item = etProduct.getText().toString();
+
+                    int date = dp.getDayOfMonth();
+                    int month = dp.getMonth() + 1 ;
+                    int year = dp.getYear();
 
 
-                    product += "Expires ";
-                    product += etProduct.getText().toString();
+                    products.add(item);
+                    expiryDate.add(year + "-" + month + "-" + date);
 
-                    listedTaskProduct.add(product);
+                    Collections.sort(products);
+
+                    for (int i =0; i < products.size(); i++) {
+                        for (int j= (i+1) ; j < expiryDate.size(); j++) {
+                            listedTaskProduct.add("Expires " + expiryDate.get(j) + products.get(i) );
+
+                        }
+                    }
+
                     task.notifyDataSetChanged();
 
-
                     etProduct.setText(null);
+
                     Toast.makeText(ItemListActivity.this, "Product is being added successfully! ", Toast.LENGTH_LONG).show();
 
                 }
@@ -129,8 +142,27 @@ public class ItemListActivity extends AppCompatActivity {
                 else {
                     String product = "";
 
-                    product += etProductDetails.getText().toString();
-                    listedTaskProduct.set(position, product);
+                    String productArray = "";
+                    String items = etProduct.getText().toString();
+
+                    int dates = dp.getDayOfMonth();
+                    int months = dp.getMonth() + 1 ;
+                    int years = dp.getYear();
+
+
+
+                    productArray += "Expires ";
+                    productArray +=  years + "-" + months + "-" + dates ;
+                    productArray += etProduct.getText().toString();
+                    products.add(items);
+                    expiryDate.add(years + "-" + months + "-" + dates);
+
+                    listedTaskProduct.add(productArray);
+
+                    Collections.sort(products);
+
+
+                    listedTaskProduct.set(position, productArray);
                     task.notifyDataSetChanged();
                     etProduct.setText(null);
                     etProductDetails.setText(null);
