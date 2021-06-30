@@ -61,7 +61,7 @@ public class ItemListActivity extends AppCompatActivity {
 
         products.add("Samsung Galaxy Buds");
         products.add("Samsung Galaxy A70");
-        products.add(" Samsung Galaxy Flip Z");
+        products.add("Samsung Galaxy Flip Z");
         products.add("Google Pixel 4a");
         products.add("IPhone 12 series");
         products.add("Apple Airpods Gen 2");
@@ -73,12 +73,12 @@ public class ItemListActivity extends AppCompatActivity {
         expiryDate.add("2022-5-6");
         expiryDate.add("2022-5-23");
 
-        for (int i =0; i < products.size(); i++) {
-            for (int j= (i+1) ; j < expiryDate.size(); j++) {
-                listedTaskProduct.add("Expires " + expiryDate.get(j) + products.get(i) );
 
-            }
+        for (int i =0; i < products.size(); i++) {
+            listedTaskProduct.add("Expires " + expiryDate.get(i) + " " + products.get(i));
+
         }
+
 
 
         ArrayAdapter task = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listedTaskProduct);
@@ -97,22 +97,27 @@ public class ItemListActivity extends AppCompatActivity {
 
                     String item = etProduct.getText().toString();
 
+
                     int date = dp.getDayOfMonth();
                     int month = dp.getMonth() + 1 ;
                     int year = dp.getYear();
 
+                    String expiry = year + "-" + month + "-" + date;
+
+                    listedTaskProduct.clear();
+
 
                     products.add(item);
-                    expiryDate.add(year + "-" + month + "-" + date);
+                    expiryDate.add(expiry);
 
-                    Collections.sort(products);
 
                     for (int i =0; i < products.size(); i++) {
-                        for (int j= (i+1) ; j < expiryDate.size(); j++) {
-                            listedTaskProduct.add("Expires " + expiryDate.get(j) + products.get(i) );
+                        Collections.sort(products);
+                        listedTaskProduct.add("Expires " + expiryDate.get(i) + " " + products.get(i));
 
-                        }
+
                     }
+
 
                     task.notifyDataSetChanged();
 
@@ -144,22 +149,26 @@ public class ItemListActivity extends AppCompatActivity {
 
                     String item = etProduct.getText().toString();
 
+
                     int date = dp.getDayOfMonth();
                     int month = dp.getMonth() + 1 ;
                     int year = dp.getYear();
 
+                    String expiry = year + "-" + month + "-" + date;
+
+                    listedTaskProduct.clear();
 
                     products.add(item);
-                    expiryDate.add(year + "-" + month + "-" + date);
+                    expiryDate.add(expiry);
 
-                    Collections.sort(products);
 
                     for (int i =0; i < products.size(); i++) {
-                        for (int j= (i+1) ; j < expiryDate.size(); j++) {
-                            listedTaskProduct.set(position,"Expires " + expiryDate.get(j) + products.get(i) );
+                        Collections.sort(products);
+                        listedTaskProduct.set(position,"Expires " + expiryDate.get(i) + " " + products.get(i));
 
-                        }
+
                     }
+
 
                     task.notifyDataSetChanged();
                     etProduct.setText(null);
@@ -178,16 +187,18 @@ public class ItemListActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                int position = Integer.parseInt(etProductDetails.getText().toString());
+                int position = Integer.parseInt(etProduct.getText().toString());
 
-                if (position >= listedTaskProduct.size()) {
+                if (position > listedTaskProduct.size()) {
                     Toast.makeText(ItemListActivity.this, "Wrong index number", Toast.LENGTH_LONG).show();
 
-                } else if (position >= listedTaskProduct.size()) {
+                }
+
+                else if (position <= listedTaskProduct.size()) {
                     listedTaskProduct.remove(position);
                     task.notifyDataSetChanged();
-                    etProductDetails.setText(null);
-                    Toast.makeText(ItemListActivity.this, "Deleted Successfully", Toast.LENGTH_LONG).show();
+                    etProduct.setText(null);
+                    Toast.makeText(ItemListActivity.this, "Product Deleted Successfully", Toast.LENGTH_LONG).show();
 
 
                 }
@@ -207,29 +218,34 @@ public class ItemListActivity extends AppCompatActivity {
 
                     case 0:
 
-                        etProduct.setHint("Enter the name of the product ");
-                        etProductDetails.setHint(null);
+                        etProduct.setHint("Enter the name of the product : ");
+                        etProduct.setEnabled(true);
                         etProductDetails.setEnabled(false);
                         btnUpdate.setEnabled(false);
                         btnAdd.setEnabled(true);
                         btnDelete.setEnabled(false);
+                        dp.setEnabled(true);
                         break;
 
 
                     case 1:
 
-                        etProduct.setHint("Type in the index number of the product to be updated ");
-                        etProductDetails.setHint("Enter the name of the product >");
+                        etProduct.setHint("Type in the index number of the product to be updated : ");
+                        etProductDetails.setHint("Enter the name of the product : ");
+                        etProduct.setEnabled(true);
                         etProductDetails.setEnabled(true);
                         btnAdd.setEnabled(false);
                         btnUpdate.setEnabled(true);
                         btnDelete.setEnabled(false);
+                        dp.setEnabled(true);
                         break;
 
 
                     case 2 :
-                        etProduct.setHint("Type in the index number of the product to deleted ");
-                        etProductDetails.setEnabled(true);
+                        etProduct.setHint("Type in the index number of the product to be deleted : ");
+                        etProduct.setEnabled(true);
+                        etProductDetails.setEnabled(false);
+                        etProductDetails.setHint(null);
                         btnAdd.setEnabled(false);
                         btnUpdate.setEnabled(false);
                         btnDelete.setEnabled(true);
