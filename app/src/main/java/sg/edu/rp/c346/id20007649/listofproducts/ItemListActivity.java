@@ -26,6 +26,7 @@ import java.util.Comparator;
 public class ItemListActivity extends AppCompatActivity {
 
     EditText etProduct;
+    EditText etProductDetails;
     ListView listViewTask;
     Button btnAdd;
     Button btnUpdate;
@@ -33,7 +34,7 @@ public class ItemListActivity extends AppCompatActivity {
 
     Spinner spinnerItems;
     Spinner spinnerFunction;
-    EditText etProductDetails;
+
     DatePicker dp;
 
     ArrayList <String> listedTaskProduct = new ArrayList<String>();
@@ -49,6 +50,7 @@ public class ItemListActivity extends AppCompatActivity {
 
 
         etProduct = findViewById(R.id.etProduct);
+        etProductDetails = findViewById(R.id.etProductDetails);
         listViewTask = findViewById(R.id.listViewProduct);
         btnAdd = findViewById(R.id.btnAdd);
         btnUpdate = findViewById(R.id.btnUpdate);
@@ -57,7 +59,7 @@ public class ItemListActivity extends AppCompatActivity {
 
         spinnerItems = findViewById(R.id.spinnerFilter);
         spinnerFunction = findViewById(R.id.spinnerFunction);
-        etProductDetails = findViewById(R.id.etProductDetails);
+
 
         products.add("Samsung Galaxy Buds");
         products.add("Samsung Galaxy A70");
@@ -104,20 +106,18 @@ public class ItemListActivity extends AppCompatActivity {
 
                     String expiry = year + "-" + month + "-" + date;
 
-                    listedTaskProduct.clear();
-
 
                     products.add(item);
                     expiryDate.add(expiry);
+
+                    listedTaskProduct.clear();
 
 
                     for (int i =0; i < products.size(); i++) {
                         Collections.sort(products);
                         listedTaskProduct.add("Expires " + expiryDate.get(i) + " " + products.get(i));
 
-
                     }
-
 
                     task.notifyDataSetChanged();
 
@@ -139,15 +139,17 @@ public class ItemListActivity extends AppCompatActivity {
 
                 int position = Integer.parseInt(etProduct.getText().toString());
 
-                if (position >= listedTaskProduct.size()) {
+                if (position > listedTaskProduct.size()) {
                     Toast.makeText(ItemListActivity.this, "Wrong index number ", Toast.LENGTH_LONG).show();
-
 
                 }
 
-                else {
 
-                    String item = etProduct.getText().toString();
+
+                else if (position <= listedTaskProduct.size() ) {
+
+
+                    String item = etProductDetails.getText().toString();
 
 
                     int date = dp.getDayOfMonth();
@@ -156,16 +158,15 @@ public class ItemListActivity extends AppCompatActivity {
 
                     String expiry = year + "-" + month + "-" + date;
 
-                    listedTaskProduct.clear();
 
-                    products.add(item);
-                    expiryDate.add(expiry);
+                    products.set(position, item);
+                    expiryDate.set(position, expiry);
+
+                    listedTaskProduct.clear();
 
 
                     for (int i =0; i < products.size(); i++) {
-                        Collections.sort(products);
-                        listedTaskProduct.set(position,"Expires " + expiryDate.get(i) + " " + products.get(i));
-
+                        listedTaskProduct.add("Expires " + expiryDate.get(i) + " " + products.get(i));
 
                     }
 
@@ -181,6 +182,7 @@ public class ItemListActivity extends AppCompatActivity {
             }
 
         });
+
 
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -221,6 +223,7 @@ public class ItemListActivity extends AppCompatActivity {
                         etProduct.setHint("Enter the name of the product : ");
                         etProduct.setEnabled(true);
                         etProductDetails.setEnabled(false);
+                        etProductDetails.setHint(null);
                         btnUpdate.setEnabled(false);
                         btnAdd.setEnabled(true);
                         btnDelete.setEnabled(false);

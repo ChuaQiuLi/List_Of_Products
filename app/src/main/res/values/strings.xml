@@ -13,7 +13,7 @@
 
     <string-array name = "spinnerFunction" >
         <item>Add a product </item>
-        <item>Update a product and expiry date </item>
+        <item>Update product and expiry date </item>
         <item>Delete a product </item>
 
 
