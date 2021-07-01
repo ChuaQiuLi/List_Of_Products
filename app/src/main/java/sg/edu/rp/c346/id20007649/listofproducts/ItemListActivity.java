@@ -179,6 +179,7 @@ public class ItemListActivity extends AppCompatActivity {
 
                 }
 
+
             }
 
         });
@@ -233,7 +234,7 @@ public class ItemListActivity extends AppCompatActivity {
 
                     case 1:
 
-                        etProduct.setHint("Type in the index number of the product to be updated : ");
+                        etProduct.setHint(" Enter index number of the product to be updated : ");
                         etProductDetails.setHint("Enter the name of the product : ");
                         etProduct.setEnabled(true);
                         etProductDetails.setEnabled(true);
@@ -245,7 +246,7 @@ public class ItemListActivity extends AppCompatActivity {
 
 
                     case 2 :
-                        etProduct.setHint("Type in the index number of the product to be deleted : ");
+                        etProduct.setHint("Enter index number of the product to be deleted : ");
                         etProduct.setEnabled(true);
                         etProductDetails.setEnabled(false);
                         etProductDetails.setHint(null);
