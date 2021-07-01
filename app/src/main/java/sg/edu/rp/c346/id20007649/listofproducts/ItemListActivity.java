@@ -1,11 +1,23 @@
 package sg.edu.rp.c346.id20007649.listofproducts;
 
-import androidx.annotation.NonNull;
+//I, Chua Qiu Li (20007649) , declare that:
+//        •	This submission is my original work – all sources have been properly referenced and acknowledged.
+//        •	I have not copied the words or graphics or ideas or codes from another person/source and submitted it as my own.
+//        •	I neither received nor rendered any assistance (either paid or unpaid) on work that requires individual effort.
+//        •	I have not communicated, discussed, shared or made available my work with other students, in part or in whole, formally or informally. By doing so, I am also guilty of plagiarism and cheating.
+//
+//        If found guilty of committing any act of academic dishonesty, I understand that I will be liable:
+//        •	for disciplinary action by the School
+//        •	to the full extent of penalties, including immediate failure for this assessment and other disciplinary actions such as dismissal
+
+
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Application;
+
 import android.os.Bundle;
-import android.util.Log;
+
 
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,9 +30,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Collection;
+
 import java.util.Collections;
-import java.util.Comparator;
+
 
 
 public class ItemListActivity extends AppCompatActivity {
