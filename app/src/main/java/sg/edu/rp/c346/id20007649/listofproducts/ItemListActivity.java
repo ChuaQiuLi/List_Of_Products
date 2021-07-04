@@ -71,8 +71,9 @@ public class ItemListActivity extends AppCompatActivity {
         spinnerFunction = findViewById(R.id.spinnerFunction);
 
         Calendar rightNow = Calendar.getInstance();
-        int year = rightNow.get(Calendar.DAY_OF_YEAR);
-        int months = rightNow.get(Calendar.DAY_OF_MONTH);
+        int date = rightNow.get(Calendar.DAY_OF_MONTH);
+        int months = rightNow.get(Calendar.MONTH);
+        int years = rightNow.get(Calendar.YEAR);
 
 
 
