@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this,ItemListActivity.class);
 
-                Toast.makeText(MainActivity.this,"Going to listview of the products that are on sales...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"Going to listview of the products that are on warranty...", Toast.LENGTH_SHORT).show();
 
                 startActivity(intent);
 

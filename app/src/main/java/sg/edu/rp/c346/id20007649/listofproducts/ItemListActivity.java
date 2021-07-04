@@ -28,7 +28,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 
 
@@ -70,10 +69,6 @@ public class ItemListActivity extends AppCompatActivity {
         spinnerItems = findViewById(R.id.spinnerFilter);
         spinnerFunction = findViewById(R.id.spinnerFunction);
 
-        Calendar rightNow = Calendar.getInstance();
-        int date = rightNow.get(Calendar.DAY_OF_MONTH);
-        int months = rightNow.get(Calendar.MONTH);
-        int years = rightNow.get(Calendar.YEAR);
 
 
 
@@ -283,35 +278,6 @@ public class ItemListActivity extends AppCompatActivity {
 
             }
         });
-
-
-        spinnerItems.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                switch (position) {
-
-                    case 0 :
-
-
-
-
-
-
-
-
-
-
-                }
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
 
 
 
