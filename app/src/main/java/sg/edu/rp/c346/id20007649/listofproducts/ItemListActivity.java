@@ -30,6 +30,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 
 
@@ -71,6 +72,10 @@ public class ItemListActivity extends AppCompatActivity {
         spinnerItems = findViewById(R.id.spinnerFilter);
         spinnerFunction = findViewById(R.id.spinnerFunction);
 
+        Calendar rightNow = Calendar.getInstance();
+        int date = rightNow.get(Calendar.DAY_OF_MONTH);
+
+
 
         products.add("Samsung Galaxy Buds");
         products.add("Samsung Galaxy A70");
@@ -111,11 +116,11 @@ public class ItemListActivity extends AppCompatActivity {
                     String item = etProduct.getText().toString();
 
 
-                    int date = dp.getDayOfMonth();
+                    int day = dp.getDayOfMonth();
                     int month = dp.getMonth() + 1 ;
                     int year = dp.getYear();
 
-                    String expiry = year + "-" + month + "-" + date;
+                    String expiry = year + "-" + month + "-" + day;
 
 
 
