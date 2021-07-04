@@ -14,8 +14,6 @@ package sg.edu.rp.c346.id20007649.listofproducts;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.os.Bundle;
 
 
@@ -73,7 +71,8 @@ public class ItemListActivity extends AppCompatActivity {
         spinnerFunction = findViewById(R.id.spinnerFunction);
 
         Calendar rightNow = Calendar.getInstance();
-        int date = rightNow.get(Calendar.DAY_OF_MONTH);
+        int year = rightNow.get(Calendar.DAY_OF_YEAR);
+        int months = rightNow.get(Calendar.DAY_OF_MONTH);
 
 
 
@@ -123,21 +122,16 @@ public class ItemListActivity extends AppCompatActivity {
                     String expiry = year + "-" + month + "-" + day;
 
 
-
                     products.add(item);
                     expiryDate.add(expiry);
-                    
 
                     Collections.sort(products);
-
 
                     listedTaskProduct.clear();
 
 
                     for (int i =0; i < products.size(); i++) {
-
                         listedTaskProduct.add("Expires " + expiryDate.get(i) + " " + products.get(i));
-
 
                     }
 
@@ -308,19 +302,6 @@ public class ItemListActivity extends AppCompatActivity {
 
 
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             }
 
