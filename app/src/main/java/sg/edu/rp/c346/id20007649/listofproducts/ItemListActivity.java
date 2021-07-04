@@ -118,15 +118,21 @@ public class ItemListActivity extends AppCompatActivity {
                     String expiry = year + "-" + month + "-" + date;
 
 
+
                     products.add(item);
                     expiryDate.add(expiry);
+                    
+
+                    Collections.sort(products);
+
 
                     listedTaskProduct.clear();
 
 
                     for (int i =0; i < products.size(); i++) {
-                        Collections.sort(products);
+
                         listedTaskProduct.add("Expires " + expiryDate.get(i) + " " + products.get(i));
+
 
                     }
 
@@ -279,8 +285,51 @@ public class ItemListActivity extends AppCompatActivity {
         });
 
 
+        spinnerItems.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                switch (position) {
+
+                    case 0 :
+
+
+
+
+
+
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+
 
     }
+
 
 }
 
