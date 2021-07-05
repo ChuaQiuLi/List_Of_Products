@@ -107,8 +107,6 @@ public class ItemListActivity extends AppCompatActivity {
 
                 if (etProduct != null) {
 
-                    listedTaskProduct.clear();
-
 
                     String item = etProduct.getText().toString();
 
@@ -121,10 +119,10 @@ public class ItemListActivity extends AppCompatActivity {
 
 
                     products.add(item);
-                    expiryDate.add(expiry);
                     int index = products.indexOf(item);
-                    expiryDate.set (index , expiry);
+                    expiryDate.add (index , expiry);
 
+                    listedTaskProduct.clear();
 
 
                     for (int i =0; i < products.size(); i++) {
