@@ -107,26 +107,28 @@ public class ItemListActivity extends AppCompatActivity {
 
                 if (etProduct != null) {
 
+                    listedTaskProduct.clear();
+
 
                     String item = etProduct.getText().toString();
 
 
                     int day = dp.getDayOfMonth();
-                    int month = dp.getMonth() + 1 ;
-                    int year = dp.getYear();
+                    int months = dp.getMonth() + 1 ;
+                    int years = dp.getYear();
 
-                    String expiry = year + "-" + month + "-" + day;
+                    String expiry = years + "-" + months + "-" + day;
 
 
                     products.add(item);
                     expiryDate.add(expiry);
+                    int index = products.indexOf(item);
+                    expiryDate.set (index , expiry);
 
-                    Collections.sort(products);
-
-                    listedTaskProduct.clear();
 
 
                     for (int i =0; i < products.size(); i++) {
+                        Collections.sort(products);
                         listedTaskProduct.add("Expires " + expiryDate.get(i) + " " + products.get(i));
 
                     }
