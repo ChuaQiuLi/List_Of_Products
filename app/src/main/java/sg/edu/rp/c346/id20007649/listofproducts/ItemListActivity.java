@@ -119,6 +119,8 @@ public class ItemListActivity extends AppCompatActivity {
 
 
                     products.add(item);
+                    Collections.sort(products);
+
                     int index = products.indexOf(item);
                     expiryDate.add (index , expiry);
 
@@ -126,7 +128,6 @@ public class ItemListActivity extends AppCompatActivity {
 
 
                     for (int i =0; i < products.size(); i++) {
-                        Collections.sort(products);
                         listedTaskProduct.add("Expires " + expiryDate.get(i) + " " + products.get(i));
 
                     }
